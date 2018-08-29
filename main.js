@@ -58,6 +58,8 @@ window.onload = function() {
 $(".genre-buttons").click(function(){
 
     let clickedButton = $(this).val();
+    $(".genre-buttons").css("opacity", "1");
+    this.style.opacity = ".5";
     console.log(clickedButton);
 
     $.getJSON(`  https://api.themoviedb.org/3/discover/movie?&api_key=${api_key}&with_genres=${clickedButton}&region=GB&vote_average&page=1`, function success(data) {
@@ -190,7 +192,7 @@ function viewMore() {
 const backToTopButton = document.getElementById("back-to-top");
 
 backToTopButton.onclick = function(){
-    window.scroll({
+    window.scrollTo({
         top: 0, 
         left: 0, 
         behavior: 'smooth' 
