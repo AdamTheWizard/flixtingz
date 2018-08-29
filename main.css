@@ -167,6 +167,7 @@ button {
     text-align:center;
     font-family: 'Comfortaa', cursive;
     display:none;
+    z-index: 11;
 }
 .about-title {
     padding:10px;
