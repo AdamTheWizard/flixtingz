@@ -60,10 +60,6 @@ button {
 
 
 /* movie boxes styles */
-.currently-playing {
-    margin-top:20px;
-    text-transform:uppercase;
-}
 .movies {
     display:flex;
     flex-wrap:wrap;
