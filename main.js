@@ -35,7 +35,7 @@ window.onload = function() {
           //create trailer link
           let newLink = document.createElement("a");
           newLink.className = "trailer-link";
-          newLink.innerHTML = "<i class='trailer-icon fas fa-film'></i>";
+          newLink.innerHTML = "<i class='trailer-icon fab fa-youtube'></i>";
           newLink.href = "https://www.youtube.com/results?search_query=trailer+" + item.title.replace(" ", "+");
           newLink.target = "_blank";
           
@@ -58,8 +58,8 @@ window.onload = function() {
 $(".genre-buttons").click(function(){
 
     let clickedButton = $(this).val();
-    $(".genre-buttons").css("opacity", "1");
-    this.style.opacity = ".5";
+    $(".genre-buttons").css("opacity", ".5");
+    this.style.opacity = "1";
     console.log(clickedButton);
 
     $.getJSON(`  https://api.themoviedb.org/3/discover/movie?&api_key=${api_key}&with_genres=${clickedButton}&region=GB&vote_average&page=1`, function success(data) {
@@ -92,7 +92,7 @@ $(".genre-buttons").click(function(){
                 //create trailer link
                 let newLink = document.createElement("a");
                 newLink.className = "trailer-link";
-                newLink.innerHTML = "<i class='trailer-icon fas fa-film'></i>";
+                newLink.innerHTML = "<i class='trailer-icon fab fa-youtube'></i>";
                 newLink.href = "https://www.youtube.com/results?search_query=trailer+" + item.title.replace(" ", "+");
                 newLink.target = "_blank";
                 
@@ -157,7 +157,7 @@ function viewMore() {
           //create trailer link
           let newLink = document.createElement("a");
           newLink.className = "trailer-link";
-          newLink.innerHTML = "<i class='trailer-icon fas fa-film'></i>";
+          newLink.innerHTML = "<i class='trailer-icon fab fa-youtube'></i>";
           newLink.href = "https://www.youtube.com/results?search_query=trailer+" + results.title.replace(" ", "+");
           newLink.target = "_blank";
 
