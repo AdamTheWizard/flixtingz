@@ -62,7 +62,7 @@ $(".genre-buttons").click(function(){
     this.style.opacity = "1";
     console.log(clickedButton);
 
-    $.getJSON(`  https://api.themoviedb.org/3/discover/movie?&api_key=${api_key}&with_genres=${clickedButton}&region=GB&vote_average&page=1`, function success(data) {
+    $.getJSON(`  https://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&api_key=${api_key}&with_genres=${clickedButton}&region=GB&vote_average&page=1&vote_count.gte=100`, function success(data) {
               console.log(data);  
               movies.innerHTML = "";
 
@@ -126,7 +126,7 @@ function viewMore() {
 
     let genreCode = $(".view-more-button").attr("id");
 
-    $.getJSON(`  https://api.themoviedb.org/3/discover/movie?&api_key=${api_key}&with_genres=${genreCode}&region=GB&vote_average&page=${pageCounter}`, function success(results) {
+    $.getJSON(`  https://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&api_key=${api_key}&with_genres=${genreCode}&region=GB&vote_average&page=${pageCounter}&vote_count.gte=100`, function success(results) {
         console.log(results);  
 
         let viewMoreButton = document.getElementById(genreCode);
