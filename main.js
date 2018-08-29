@@ -2,13 +2,61 @@ const api_key = "1d416f57dfaeb8ebb4298e8b70c491e5";
 const movies = document.getElementById("movies");
 const imgUrl = "https://image.tmdb.org/t/p/w500/";
 let pageCounter = 2;
+ 
+
+window.onload = function() {
+    
+    $.getJSON(`  https://api.themoviedb.org/3/movie/now_playing?api_key=${api_key}&language=en-US&page=1`, function success(data) {
+        console.log(data);  
+
+        pageCounter = 2;
+
+        data.results.forEach(function(item) {
+
+          //create movies boxes 
+          let newBox = document.createElement("div");
+          newBox.className = "movie-box";
+
+          // create movies poster image
+          let newPoster = document.createElement("img");
+          newPoster.src = imgUrl + item.poster_path;
+          newPoster.className = "poster-image";
+          
+          // create titles from data
+          let newTitle = document.createElement("h1");
+          newTitle.innerHTML = item.title + " <br><span class='date'>(" + item.release_date.substring(0,4) + ") - " + item.vote_average + "</span>";
+          newTitle.className = "movie-title";
+
+          // create overview from data
+          let newOverview = document.createElement("p");
+          newOverview.innerHTML = item.overview;
+          newOverview.className = "movie-overview";
+
+          //create trailer link
+          let newLink = document.createElement("a");
+          newLink.className = "trailer-link";
+          newLink.innerHTML = "<i class='trailer-icon fas fa-film'></i>";
+          newLink.href = "https://www.youtube.com/results?search_query=trailer+" + item.title.replace(" ", "+");
+          newLink.target = "_blank";
+          
+          newBox.appendChild(newPoster);
+          newBox.appendChild(newTitle);
+          newBox.appendChild(newOverview);
+          newBox.appendChild(newLink);
+          movies.appendChild(newBox);
+          
+
+        });
+                
+}
+);
+}
+
 
 // click button with genre name
 // use clickedButton to get correct genre of movies for list
 $(".genre-buttons").click(function(){
 
-    
-    
     let clickedButton = $(this).val();
     console.log(clickedButton);
 

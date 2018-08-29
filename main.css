@@ -2,20 +2,25 @@
     margin:0;
     padding:0;
 }
-
+body {
+    font-family: 'Comfortaa', cursive;
+}
 header {
     width:100vw;
     position:fixed;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    font-family: 'Comfortaa', cursive;
     background:#fff;
 }
 header .title {
     padding:10px;
 }
 
+header a {
+    text-decoration: none;
+    color:#444;
+}
 
 .nav-list {
     display:flex;
@@ -55,7 +60,10 @@ button {
 
 
 /* movie boxes styles */
-
+.currently-playing {
+    margin-top:20px;
+    text-transform:uppercase;
+}
 .movies {
     display:flex;
     flex-wrap:wrap;
