@@ -27,7 +27,7 @@ header .title {
 .buttons {
     display:flex;
     flex-wrap:wrap;
-    justify-content:space-between;
+    justify-content:center;
     padding:10px;
     padding-top:40px;
 }
@@ -46,7 +46,7 @@ button {
     border:none;
     border-radius:10px;
     font-family: 'Comfortaa', cursive;
-    font-size:24px;
+    font-size:20px;
     cursor:pointer;
     background:#97f8cd;
     outline:none;
