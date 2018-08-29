@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Getflix.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+    
+</head>
+<body>
+    <header>
+        <h2 class="title"><i class="film-icon fas fa-film"></i> Getflix</h2>
+        <ul class="nav-list">
+            <li class="list-item" id="about-link">About</li>
+        </ul>
+    </header>
+
+    <!-- values in buttons are the movie genre codes from TMDB -->
+    <section class="buttons">
+            <button class="genre-buttons" value="14">Fantasy</button>
+            <button class="genre-buttons" value="28">Action</button>
+            <button class="genre-buttons" value="35">Comedy</button>
+            <button class="genre-buttons" value="12">Adventure</button>
+            <button class="genre-buttons" value="16">Animation</button>
+            <button class="genre-buttons" value="878">Sci-Fi</button>
+            <button class="genre-buttons" value="27">Horror</button>
+            <button class="genre-buttons" value="10749">Romance</button>
+            <button class="genre-buttons" value="18">Drama</button>
+    </section>
+    
+    <section class="movies" id="movies">
+
+    </section>
+
+    <button id="back-to-top" class="back-to-top"><i class="fas fa-angle-double-up"></i></button>
+
+    <section class="about-container" id="about-container">
+        <h1 class="about-title">About</h1>
+        <p class="about-text">I wanted to build a website where I could quickly check out the highest rated movies from different genres, all on a very simple interface.</p>
+        <img src="https://www.themoviedb.org/assets/1/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png" alt="" class="about-image">
+        <p class="about-disclaimer">This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
+        <button id="about-close" class="about-close"><i class="fas fa-times"></i></button>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
