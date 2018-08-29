@@ -192,11 +192,8 @@ function viewMore() {
 const backToTopButton = document.getElementById("back-to-top");
 
 backToTopButton.onclick = function(){
-    window.scrollTo({
-        top: 0, 
-        left: 0, 
-        behavior: 'smooth' 
-       });
+    setTimeout(
+    window.scrollTo({top: 0,left: 0,behavior: 'smooth'}), 100);
 }
 
 window.onscroll = function(){
