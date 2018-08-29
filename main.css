@@ -18,7 +18,7 @@ header {
         -ms-flex-align:center;
             align-items:center;
     background:#fff;
-    
+    z-index: 10;
 }
 header .title {
     padding:10px;
@@ -185,4 +185,14 @@ button {
     position:absolute;
     top:0;
     right:0;
+}
+
+footer {
+    text-align:center;
+    font-size:80%;
+    margin-top:40px;
+}
+footer a {
+    text-decoration: none;
+    color: rgb(54, 107, 253);
 }
