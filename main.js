@@ -64,7 +64,7 @@ $(".genre-buttons").click(function(){
     this.style.opacity = "1";
     console.log(clickedButton);
 
-    $.getJSON(`  https://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&api_key=${api_key}&with_genres=${clickedButton}&region=GB&vote_average&page=1&vote_count.gte=100`, function success(data) {
+    $.getJSON(`  https://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&api_key=${api_key}&with_genres=${clickedButton}&region=GB&vote_average&page=1&vote_count.gte=1000`, function success(data) {
               console.log(data);  
               movies.innerHTML = "";
 
@@ -133,7 +133,7 @@ function viewMore() {
     // the id is then used to get more movies from the same genre 
     let genreCode = $(".view-more-button").attr("id");
 
-    $.getJSON(`  https://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&api_key=${api_key}&with_genres=${genreCode}&region=GB&vote_average&page=${pageCounter}&vote_count.gte=100`, function success(results) {
+    $.getJSON(`  https://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&api_key=${api_key}&with_genres=${genreCode}&region=GB&vote_average&page=${pageCounter}&vote_count.gte=1000`, function success(results) {
         console.log(results);  
 
         // remove the view-more-button so another one can be added at the end of the container
