@@ -24,6 +24,12 @@ header .title {
     padding:10px;
 }
 
+.film-icon {
+    background: -webkit-linear-gradient(rgb(255, 53, 53), rgb(235, 235, 47), rgb(20, 255, 20));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 header a {
     text-decoration: none;
     color:#444;
