@@ -1,4 +1,4 @@
-const api_key = "1d416f57dfaeb8ebb4298e8b70c491e5";
+const api_key = API_KEY;
 const movies = document.getElementById("movies");
 const imgUrl = "https://image.tmdb.org/t/p/w500/";
 let pageCounter = 2;
